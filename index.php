@@ -18,37 +18,53 @@ if(isset($_GET['kenh'])){
     {
         case 1 :
             $kenh = 1 ;
+            $kenhtivi =  getkenh($kenh);
+            $mau1 = 'class="doimau"';
             break;
         case 2 :
             $kenh = 2 ;
+            $kenhtivi =  getkenh($kenh);
+            $mau2 = 'class="doimau"';
             break;
         case 3:
             $kenh = 3 ;
+            $kenhtivi =  getkenh($kenh);
+            $mau3 = 'class="doimau"';
             break;
         case 4:
             $kenh = 4 ;
+            $kenhtivi =  getkenh($kenh);
+            $mau4 = 'class="doimau"';
             break;
         case 5:
             $kenh = 5 ;
+            $kenhtivi =  getkenh($kenh);
+            $mau5 = 'class="doimau"';
             break;
         case 6:
             $kenh= 6 ;
+            $kenhtivi =  getkenh($kenh);
+            $mau6 = 'class="doimau"';
             break;
         case 7:
             $kenh =  7 ;
+            $kenhtivi = "http://123.30.191.202/hls/antv.m3u8";
             break;
         case 8 :
             $kenh = 8 ;
+            $kenhtivi = "http://125.235.29.16/livetv/keeng.m3u8";
             break;
         case 9:
             $kenh = 9 ;
+            $kenhtivi ="http://sv2.xemtiviso.com/nextbest.php?id=itv&token=kph1CmtM7FbJCiDlr_muqA&e=1502729322";
             break;
     }
 }
 else {
     $kenh = 1;
+    $kenhtivi =  getkenh($kenh);
 }
-$kenhtivi =  getkenh($kenh);
+
 ?>
 <?php
 require_once ("getkenh.php");
@@ -107,6 +123,19 @@ require_once ("getkenh.php");
             border-bottom: none !important;
 
         }
+        .doimau {
+            /* -webkit-filter: grayscale(100%); */
+            filter: grayscale(100%);
+            /* -webkit-transition: .3s ease-in-out; */
+            transition: .3s ease-in-out;
+        }
+        .doimau:hover {
+            filter: none;
+            transition: .3s ease;
+        }
+        ul.icontv li a img {
+            width: 70px;
+        }
     </style>
     <link rel="stylesheet" href="https://cdn.plyr.io/2.0.13/demo.css">
 </head>
@@ -138,20 +167,21 @@ require_once ("getkenh.php");
                                 file : "<?php echo $kenhtivi; ?>",
                                 p2pConfig : { streamrootKey: 'YOUR_STREAMROOT_KEY' },
                                 "height": 600,
-                                "width": 1000
+                                "width": 1000,
+                                autostart: true,
                             });
                         </script>
-<ul class="icontv">
-    <li><a href="?kenh=1"><img src="http://vtvgo-imgobj.b5695cde.cdnviet.com/images/1__.png" /></a> </li>
-    <li><a href="?kenh=2"><img src="http://vtvgo-imgobj.b5695cde.cdnviet.com/images/2__.png" /></a> </li>
-    <li><a href="?kenh=3"><img src="http://vtvgo-imgobj.b5695cde.cdnviet.com/images/3__.png" /></a> </li>
-    <li><a href="?kenh=4"><img src="http://vtvgo-imgobj.b5695cde.cdnviet.com/images/4__.png" /></a> </li>
-    <li><a href="?kenh=5"><img src="http://vtvgo-imgobj.b5695cde.cdnviet.com/images/5__.png" /></a> </li>
-    <li><a href="?kenh=6"><img src="http://vtvgo-imgobj.b5695cde.cdnviet.com/images/6__.png" /></a> </li>
-    <li><a href="?kenh=7"><img src="http://vtvgo-imgobj.b5695cde.cdnviet.com/images/27__.png" /></a> </li>
-    <li><a href="?kenh=8"><img src="http://vtvgo-imgobj.b5695cde.cdnviet.com/images/36__.png" /></a> </li>
-    <li><a href="?kenh=9"><img src="http://vtvgo-imgobj.b5695cde.cdnviet.com/images/39__.png" /></a> </li>
-</ul>
+                        <ul class="icontv">
+                            <li><a href="?kenh=1"><img <?php echo $mau1; ?> src="http://vtvgo-imgobj.b5695cde.cdnviet.com/images/1__.png" /></a> </li>
+                            <li><a href="?kenh=2"><img <?php echo $mau2; ?> src="http://vtvgo-imgobj.b5695cde.cdnviet.com/images/2__.png" /></a> </li>
+                            <li><a href="?kenh=3"><img <?php echo $mau3; ?> src="http://vtvgo-imgobj.b5695cde.cdnviet.com/images/3__.png" /></a> </li>
+                            <li><a href="?kenh=4"><img <?php echo $mau4; ?> src="http://vtvgo-imgobj.b5695cde.cdnviet.com/images/4__.png" /></a> </li>
+                            <li><a href="?kenh=5"><img <?php echo $mau5; ?> src="http://vtvgo-imgobj.b5695cde.cdnviet.com/images/5__.png" /></a> </li>
+                            <li><a href="?kenh=6"><img <?php echo $mau6; ?> src="http://vtvgo-imgobj.b5695cde.cdnviet.com/images/6__.png" /></a> </li>
+                            <li><a href="?kenh=7"><img src="http://htvc.vn/uploads/editor/images/1423638450_logoantv.png" /></a> </li>
+                            <li><a href="?kenh=8"><img src="http://vod.mobitv.vn/medias_7/2016_06_25/1466827981115/bba67f0df563.png" /></a> </li>
+                            <li><a href="?kenh=9"><img  src="http://vtvgo-imgobj.b5695cde.cdnviet.com/images/39__.png" /></a> </li>
+                        </ul>
                     </div>
                 </div>
             </div>
