@@ -127,7 +127,7 @@ require_once ("getkenh.php");
             </nav>
             <div class="well">
                 <div class="centered">
-                    <h2>TIVI ONLINE </h2>
+                    <h2>Bạn đang xem VTV <?php echo $kenh; ?></h2>
                     <h5 style="text-align: right;font-weight: bold;color: #0400ff; margin: 20px 0 20px 0;">Hotline:01672149659 - Email:devqanh@gmail.com</h5>
 
                     <div class="col-mg-12 video">
