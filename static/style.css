@@ -1,0 +1,52 @@
+.centered {
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+}
+span.input-group-btn input.btn.btn-primary {
+    font-size: 11px;
+    padding: 11px;
+}
+input#url {
+    pointer-events: none;
+}
+.btn {
+    color: #ffffff !important;
+    background: #008cba !important;
+    border-color: #0079a1 !important;
+}
+.col-mg-12.video {
+    margin-top: 4%;
+}
+#vid_url{
+    word-break: break-all;
+}
+ul.icontv {
+    padding: 3%;
+}
+
+ul.icontv li {
+    float: left;
+    margin-right: 30px;
+}
+a {
+    border-bottom: none !important;
+
+}
+.doimau {
+    /* -webkit-filter: grayscale(100%); */
+    filter: grayscale(100%);
+    /* -webkit-transition: .3s ease-in-out; */
+    transition: .3s ease-in-out;
+}
+.doimau:hover {
+    filter: none;
+    transition: .3s ease;
+}
+ul.icontv li a img {
+    width: 70px;
+}
+.jw-logo.jw-reset.jw-logo-top-right {
+    margin-top: 50%;
+    width: 10% !important;
+}
