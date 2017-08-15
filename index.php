@@ -70,7 +70,7 @@ else {
     <link rel="stylesheet" href="static/style.css">
     <link rel="stylesheet" href="https://cdn.plyr.io/2.0.13/demo.css">
 </head>
-
+<body>
 <div class="container">
     <div class="row clearfix">
         <div class="col-md-12 column">
