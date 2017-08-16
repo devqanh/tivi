@@ -38,6 +38,17 @@ if (isset($_GET['kenh'])) {
         case 8 :
             $kenh = 8;
             $kenhtivi = "http://125.235.29.16/livetv/keeng.m3u8";
+            $quangcao = " advertising: {
+                                    client: 'vast',
+                                    schedule: {
+                                        adbreak1: {
+                                            offset : 5 ,
+                                            tag: '/static/ads.xml',
+                                            skipoffset: 5
+                                        }
+                                    }
+                                }";
+            $thongbao = "Chúng tôi đang thử nghiệm quảng cáo trên player , xin lỗi vì sự bất tiện này !";
             break;
         case 9:
             $kenh = 9;

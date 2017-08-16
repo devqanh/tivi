@@ -50,3 +50,22 @@ ul.icontv li a img {
     margin-top: 50%;
     width: 10% !important;
 }
+h6.thongbao {
+    color: #f50000;
+
+}
+.thongbao {
+    animation: blink-animation 3s steps(6, start) infinite;
+    -webkit-animation: blink-animation 3s steps(6, start) infinite;
+
+}
+@keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+
+@-webkit-keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
